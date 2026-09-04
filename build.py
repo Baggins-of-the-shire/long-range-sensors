@@ -119,6 +119,25 @@ def validate(photos, filters):
         if f["key"] not in used:
             problems.append("filter '%s' matches nothing" % f["key"])
 
+    # The "Start of the log" pill and the home screen shortcut both point at
+    # the last record. Append a record instead of prepending one, or reorder
+    # the file, and they rot silently into a link to nothing in particular.
+    if photos and photos[-1].get("slug"):
+        oldest = "#p-%s" % photos[-1]["slug"]
+        try:
+            manifest = load("manifest.webmanifest")
+        except Exception as exc:
+            problems.append("manifest.webmanifest could not be read (%s)" % exc)
+        else:
+            anchored = [s for s in manifest.get("shortcuts", []) if "#p-" in s.get("url", "")]
+            if not anchored:
+                problems.append("manifest has no shortcut pointing at a record")
+            for s in anchored:
+                if not s["url"].endswith(oldest):
+                    problems.append("manifest shortcut '%s' points at %s, but the "
+                                    "last record is %s"
+                                    % (s.get("name", "?"), s["url"], oldest))
+
     return problems
 
 
@@ -197,6 +216,37 @@ def render_viewer(p, i, total, prev_slug, next_slug):
            idx="%02d" % i, total="%02d" % total, note=e(p["note"]))
 
 
+def render_keep(panel_id, close_to):
+    """Two entry points means two panels. The sibling site learned this the
+    hard way: a single shared panel always closes to the wrong end of the page
+    for one of them, and the reader loses their place."""
+    return """<div class="keep" id="{id}" role="dialog" aria-label="Add to home screen">
+  <div class="keep-card">
+    <h2>Add to console</h2>
+    <p>No page can put itself on your home screen, so here are the taps. It
+      opens without browser chrome and keeps its own place in the list.</p>
+    <p class="keep-step">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11M12 3l-3.2 3.2M12 3l3.2 3.2M5 12.5V20a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-7.5"/></svg>
+      <span><strong>iPhone and iPad.</strong> Share, then Add to Home Screen.</span>
+    </p>
+    <p class="keep-step">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="12" cy="19" r="1.6"/></svg>
+      <span><strong>Android.</strong> The three dot menu, then Add to Home screen.</span>
+    </p>
+    <p class="keep-step">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"/><circle cx="5.5" cy="18.5" r="1.6"/></svg>
+      <span><strong>Or subscribe.</strong> <a href="feed.xml">The feed</a> carries every new record.</span>
+    </p>
+    <div class="keep-qr">
+      <img src="qr.svg" alt="A QR code for this site" width="132" height="132">
+      <span>Or point a phone at this to take it with you.</span>
+    </div>
+    <a class="vbtn close" href="#{close_to}">Close</a>
+  </div>
+</div>
+""".format(id=panel_id, close_to=close_to)
+
+
 def render(photos, filters, css_v, js_v):
     total = len(photos)
     plates = "".join(render_plate(p, i + 1, total) for i, p in enumerate(photos))
@@ -224,10 +274,18 @@ def render(photos, filters, css_v, js_v):
 <meta name="description" content="Robotic telescope captures, logged with the fault written on the label.">
 <meta name="theme-color" content="#000000">
 <meta name="color-scheme" content="dark">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="icon-192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Sensors">
+<link rel="alternate" type="application/rss+xml" title="Long Range Sensors" href="feed.xml">
 <link rel="stylesheet" href="style.css?v={css_v}">
 </head>
 <body>
-<div class="frame">
+<div class="frame" id="top">
 
   <header class="head">
     <div class="elbow"></div>
@@ -253,16 +311,23 @@ def render(photos, filters, css_v, js_v):
     <main class="well">
       <p class="brief">{tagline}</p>
       <p class="count">{total} records logged &middot; {nominal} nominal &middot; {degraded} degraded</p>
+      <div class="transit">
+        <a class="probe" href="#keep-top" aria-label="Add this console to your home screen">
+          <img src="probe.svg" alt="" width="120" height="64" decoding="async">
+        </a>
+      </div>
+      <p class="startline"><a class="pill" href="#p-{oldest}">Start of the log</a></p>
       <ol class="plates">
 {plates}      </ol>
     </main>
   </div>
 
-  <footer class="foot">
+  <footer class="foot" id="end">
     <div class="elbow"></div>
     <div class="bar">
       <span>Captured with <a href="https://slooh.com">Slooh</a></span>
-      <span>Watermarks left intact</span>
+      <a href="#keep-below">Add to home screen</a>
+      <a href="feed.xml">Feed</a>
       <a href="#top">Top</a>
     </div>
     <div class="cap"></div>
@@ -270,11 +335,17 @@ def render(photos, filters, css_v, js_v):
 
 </div>
 
+
+{keep_top}
+{keep_below}
 {viewers}
 <script src="app.js?v={js_v}"></script>
 </body>
 </html>
 """.format(title=e(TITLE), title_uc=e(TITLE), css_v=css_v, js_v=js_v,
+           oldest=e(photos[-1]["slug"]),
+           keep_top=render_keep("keep-top", "top"),
+           keep_below=render_keep("keep-below", "end"),
            sd="%.1f" % stardate(), tagline=e(TAGLINE), total=total,
            nominal=nominal, degraded=total - nominal, pills=pills,
            plates=plates, viewers=viewers)

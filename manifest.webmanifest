@@ -1,0 +1,31 @@
+{
+  "name": "Long Range Sensors",
+  "short_name": "Sensors",
+  "description": "Robotic telescope captures, logged with the fault written on the label.",
+  "start_url": "./",
+  "scope": "./",
+  "id": "/long-range-sensors/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "categories": ["education", "photo"],
+  "icons": [
+    { "src": "apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    {
+      "name": "Start of the log",
+      "short_name": "Oldest",
+      "description": "Jump to the first record in the log",
+      "url": "./#p-saturn"
+    }
+  ],
+  "screenshots": [
+    { "src": "screenshot-narrow.jpg", "sizes": "540x960", "type": "image/jpeg", "form_factor": "narrow" },
+    { "src": "screenshot-wide.jpg", "sizes": "1280x800", "type": "image/jpeg", "form_factor": "wide" }
+  ]
+}

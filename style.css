@@ -266,6 +266,144 @@ img { display: block; max-width: 100%; }
   margin: 18px 0 10px;
 }
 
+/* --- Transit strip -------------------------------------------------------
+   A survey probe crosses the console on a hairline, slowly. It is here on
+   purpose: two of the opening records have a satellite drawn through them,
+   and one caption is about exactly that, so the thing that drifts past is
+   the thing that spoils the exposures. */
+
+.transit {
+  position: relative;
+  height: 66px;
+  margin: 4px 0 14px;
+  overflow: hidden;
+}
+.transit::before {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; top: 50%;
+  height: 1px;
+  background: var(--grape);
+  /* The track runs through the probe's exact centre, so without this it wins
+     the hit test and the probe never sees a hover. */
+  pointer-events: none;
+}
+/* Animating `left` rather than `transform` on purpose. A transform percentage
+   resolves against the element, not its parent, so there is no way to say
+   "the width of the strip" in a transform. The strip is narrower than the
+   viewport, so a vw-based transform sent the probe off the right edge and
+   left it gone for most of the cycle. One small element moving once every
+   54 seconds is not a layout cost worth a workaround. */
+.probe {
+  position: absolute;
+  top: 50%;
+  left: -160px;
+  width: 120px;
+  height: 64px;
+  transform: translateY(-50%);
+  animation: transit 54s linear infinite;
+}
+/* The tail hangs off the back of the probe rather than being drawn on the
+   strip, so it travels with it and needs no second animation. */
+.probe::before {
+  content: '';
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  width: 240px;
+  height: 1px;
+  background: linear-gradient(to left, var(--amber), transparent);
+  /* Otherwise the hit area is the craft plus 240px of empty trail behind it. */
+  pointer-events: none;
+}
+.probe img { display: block; width: 100%; height: 100%; }
+/* The probe is also the way in to the keep panel, which makes it a moving
+   target. Pausing on hover and on keyboard focus turns that from a nuisance
+   into the small reward for noticing it. */
+.probe:hover, .probe:focus-visible { animation-play-state: paused; }
+
+@keyframes transit {
+  from { left: -160px; }
+  to   { left: calc(100% + 160px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .probe { animation: none; left: 58%; }
+}
+
+/* --- Keep panel ---------------------------------------------------------- */
+
+.keep {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 70;
+  background: #000;
+  padding: 18px;
+  place-items: center;
+}
+.keep:target { display: grid; }
+
+.keep-card {
+  width: min(520px, 100%);
+  background: var(--panel);
+  border: 1px solid var(--hairline);
+  border-left: 6px solid var(--amber);
+  padding: 20px 22px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+.keep-card h2 {
+  font-size: 21px;
+  font-weight: 400;
+  letter-spacing: 2.6px;
+  text-transform: uppercase;
+  color: var(--peach);
+}
+.keep-card p { font-size: 14px; line-height: 1.55; color: var(--lilac); }
+.keep-card a { color: var(--amber); }
+
+.keep-step { display: flex; align-items: flex-start; gap: 12px; }
+.keep-step strong { color: var(--sky); font-weight: 400; letter-spacing: 1.2px; }
+.keep-step svg {
+  width: 26px; height: 26px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: var(--amber);
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.keep-step svg circle { fill: var(--amber); stroke: none; }
+.keep-card .close { align-self: flex-start; margin-top: 4px; }
+
+.keep-qr {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-top: 1px solid var(--hairline);
+  padding-top: 13px;
+}
+.keep-qr img { width: 108px; height: 108px; flex-shrink: 0; }
+
+/* --- Start of the log ---------------------------------------------------- */
+
+.startline { text-align: center; margin: 0 0 16px; }
+.pill {
+  display: inline-flex;
+  align-items: center;
+  height: 34px;
+  padding: 0 22px;
+  background: var(--periwinkle);
+  color: #000;
+  font-size: 13px;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 17px;
+}
+.pill:hover { filter: brightness(1.15); }
+
 .plates {
   list-style: none;
   display: grid;
@@ -493,6 +631,20 @@ body.viewing { overflow: hidden; }
   .well { padding: 14px 0 0; }
   .plates { grid-template-columns: 1fr; }
   .viewer .vfoot .vnote { display: none; }
+
+  .transit { height: 52px; }
+
+  /* Four footer items will not sit on one 58px line at this width, and the
+     fixed height was letting them spill out of the bar. Let it grow. */
+  .foot { height: auto; min-height: 58px; }
+  .foot .bar {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px 14px;
+    padding: 10px 8px;
+    font-size: 10px;
+    line-height: 1.5;
+  }
 }
 
 /* --- Motion -------------------------------------------------------------- */
