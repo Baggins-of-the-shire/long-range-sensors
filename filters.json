@@ -1,0 +1,7 @@
+[
+  { "key": "nebula",       "label": "Nebulae",      "code": "47-1180", "colour": "tan" },
+  { "key": "galaxy",       "label": "Galaxies",     "code": "47-2204", "colour": "sky" },
+  { "key": "cluster",      "label": "Clusters",     "code": "47-3391", "colour": "periwinkle" },
+  { "key": "comet",        "label": "Comets",       "code": "47-4417", "colour": "peach" },
+  { "key": "solar-system", "label": "Solar System", "code": "47-5502", "colour": "amber" }
+]

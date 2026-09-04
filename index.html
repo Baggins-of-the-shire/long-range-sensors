@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Long Range Sensors</title>
+<meta name="description" content="Robotic telescope captures, logged with the fault written on the label.">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
+<link rel="stylesheet" href="style.css?v=b0bd49bd">
+</head>
+<body>
+<div class="frame">
+
+  <header class="head">
+    <div class="elbow"></div>
+    <div class="bar">
+      <h1>Long Range Sensors</h1>
+      <span class="seg seg-a"></span>
+      <span class="seg seg-b"></span>
+      <span class="stardate" id="stardate">Stardate 47675.6</span>
+    </div>
+    <div class="cap"></div>
+  </header>
+
+  <div class="shell">
+    <nav class="rail" aria-label="Filter records by class">
+      <div class="rail-lead"></div>
+      <p class="rail-heading">Class</p>
+      <form class="filters">
+        <input type="checkbox" class="fbox" id="f-nebula">
+        <label class="btn tan" for="f-nebula">Nebulae<span class="code">47-1180</span></label>
+        <input type="checkbox" class="fbox" id="f-galaxy">
+        <label class="btn sky" for="f-galaxy">Galaxies<span class="code">47-2204</span></label>
+        <input type="checkbox" class="fbox" id="f-cluster">
+        <label class="btn periwinkle" for="f-cluster">Clusters<span class="code">47-3391</span></label>
+        <input type="checkbox" class="fbox" id="f-comet">
+        <label class="btn peach" for="f-comet">Comets<span class="code">47-4417</span></label>
+        <input type="checkbox" class="fbox" id="f-solar-system">
+        <label class="btn amber" for="f-solar-system">Solar System<span class="code">47-5502</span></label>
+        <button type="reset" class="btn reset">All<span class="code">47-0000</span></button>
+      </form>
+      <div class="rail-tail"></div>
+    </nav>
+
+    <main class="well">
+      <p class="brief">Robotic telescopes on three continents, pointed at things that were already old when the light left them. Some of these came out. The rest are here anyway, with the fault written on the label.</p>
+      <p class="count">7 records logged &middot; 2 nominal &middot; 5 degraded</p>
+      <ol class="plates">
+      <li class="plate c-nebula" id="p-orion-nebula">
+        <a class="shot" href="#v-orion-nebula" aria-label="Open Orion Nebula full screen">
+          <span class="idx">01 / 07</span>
+          <img src="images/2026-09-04-orion-nebula.jpg" alt="A bright nebula filling the frame, with a blazing white core at centre and sweeping red and blue-grey clouds of gas spreading out to either side, against a dark sky scattered with stars." width="1018" height="1018" loading="lazy" decoding="async">
+        </a>
+        <div class="readout">
+          <div class="name">
+            <h2>Orion Nebula</h2>
+            <span class="desig">M42</span>
+          </div>
+          <span class="status nominal">Nominal</span>
+          <dl class="specs">
+            <dt>Instrument</dt><dd>Canary One &middot; Half-Meter</dd>
+            <dt>Site</dt><dd>Teide Observatory, Canary Islands</dd>
+            <dt>Filter</dt><dd>LRGB</dd>
+            <dt>Captured</dt><dd>2026-09-04 06:03 UTC</dd>
+          </dl>
+          <p class="note">The Trapezium burns out the middle of the frame and the wings of gas carry on regardless. Four filtered exposures stacked into one colour image, and the only frame in this batch that needs no apology.</p>
+        </div>
+      </li>
+      <li class="plate c-cluster" id="p-omega-centauri">
+        <a class="shot" href="#v-omega-centauri" aria-label="Open Omega Centauri full screen">
+          <span class="idx">02 / 07</span>
+          <img src="images/2026-09-04-omega-centauri.jpg" alt="A dense globular star cluster, thousands of individual white points crowding toward a bright unresolved core, on a black sky. A faint straight line crosses the upper right corner." width="1365" height="1365" loading="lazy" decoding="async">
+        </a>
+        <div class="readout">
+          <div class="name">
+            <h2>Omega Centauri</h2>
+            <span class="desig">NGC 5139</span>
+          </div>
+          <span class="status nominal">Nominal</span>
+          <dl class="specs">
+            <dt>Instrument</dt><dd>Australia One &middot; Half-Meter</dd>
+            <dt>Site</dt><dd>Siding Spring, New South Wales</dd>
+            <dt>Filter</dt><dd>L</dd>
+            <dt>Captured</dt><dd>2026-09-04 08:46 UTC</dd>
+          </dl>
+          <p class="note">Roughly ten million stars held together by their own gravity, sitting too far south for the Canary scopes to reach. Australia One caught it clean. Something in low orbit drew a thin line across the top right on its way past.</p>
+        </div>
+      </li>
+      <li class="plate c-galaxy" id="p-andromeda">
+        <a class="shot" href="#v-andromeda" aria-label="Open Andromeda Galaxy full screen">
+          <span class="idx">03 / 07</span>
+          <img src="images/2026-09-04-andromeda.jpg" alt="A large bright galaxy tilted across a black-and-white frame, with a glowing oval core and dark dust lanes curving through the surrounding haze, on a field of stars." width="1365" height="1365" loading="lazy" decoding="async">
+        </a>
+        <div class="readout">
+          <div class="name">
+            <h2>Andromeda Galaxy</h2>
+            <span class="desig">M31</span>
+          </div>
+          <span class="status degraded">Degraded &middot; Sensor banding</span>
+          <dl class="specs">
+            <dt>Instrument</dt><dd>Canary Two &middot; Wide-Field</dd>
+            <dt>Site</dt><dd>Teide Observatory, Canary Islands</dd>
+            <dt>Filter</dt><dd>L</dd>
+            <dt>Captured</dt><dd>2026-09-04 02:45 UTC</dd>
+          </dl>
+          <p class="note">Faint vertical stripes run through this one. That is the sensor, not the sky. Underneath them the dust lanes are plainly there, having crossed two and a half million light years of nothing to get here.</p>
+        </div>
+      </li>
+      <li class="plate c-nebula" id="p-hubbles-variable-nebula">
+        <a class="shot" href="#v-hubbles-variable-nebula" aria-label="Open Hubble&#x27;s Variable Nebula full screen">
+          <span class="idx">04 / 07</span>
+          <img src="images/2026-09-04-hubbles-variable-nebula.jpg" alt="A dense field of faint stars in muted brown tones, with a small comet-shaped bright nebula at centre and a thin pale line crossing the frame diagonally on the right." width="1018" height="1018" loading="lazy" decoding="async">
+        </a>
+        <div class="readout">
+          <div class="name">
+            <h2>Hubble&#x27;s Variable Nebula</h2>
+            <span class="desig">NGC 2261</span>
+          </div>
+          <span class="status degraded">Degraded &middot; Satellite transit</span>
+          <dl class="specs">
+            <dt>Instrument</dt><dd>Canary One &middot; Half-Meter</dd>
+            <dt>Site</dt><dd>Teide Observatory, Canary Islands</dd>
+            <dt>Filter</dt><dd>LRGB</dd>
+            <dt>Captured</dt><dd>2026-09-04 06:16 UTC</dd>
+          </dl>
+          <p class="note">A satellite crossed during the exposure and left the pale line down the right side. The nebula is the small comet-shaped smudge at centre, lit by a star that flickers, so its shape genuinely changes from one week to the next.</p>
+        </div>
+      </li>
+      <li class="plate c-nebula" id="p-crab-nebula">
+        <a class="shot" href="#v-crab-nebula" aria-label="Open Crab Nebula full screen">
+          <span class="idx">05 / 07</span>
+          <img src="images/2026-09-04-crab-nebula.jpg" alt="A small mottled pink knot of nebulosity near the centre of a star field, with a broad amber wash of glare covering the left half of the frame." width="1018" height="1018" loading="lazy" decoding="async">
+        </a>
+        <div class="readout">
+          <div class="name">
+            <h2>Crab Nebula</h2>
+            <span class="desig">M1</span>
+          </div>
+          <span class="status degraded">Degraded &middot; Gradient</span>
+          <dl class="specs">
+            <dt>Instrument</dt><dd>Canary One &middot; Half-Meter</dd>
+            <dt>Site</dt><dd>Teide Observatory, Canary Islands</dd>
+            <dt>Filter</dt><dd>LRGB</dd>
+            <dt>Captured</dt><dd>2026-09-04 05:27 UTC</dd>
+          </dl>
+          <p class="note">Something bright sat just outside the frame and half the picture is its glare. The remnant is the small tangled knot near the middle, all that is left of a star that Chinese astronomers watched explode in 1054.</p>
+        </div>
+      </li>
+      <li class="plate c-comet" id="p-comet-220p">
+        <a class="shot" href="#v-comet-220p" aria-label="Open Comet 220P/McNaught full screen">
+          <span class="idx">06 / 07</span>
+          <img src="images/2026-09-04-comet-220p.jpg" alt="A dark red and brown gradient across the frame with scattered stars, and a small elongated fuzzy patch just below centre where the comet is." width="1018" height="1018" loading="lazy" decoding="async">
+        </a>
+        <div class="readout">
+          <div class="name">
+            <h2>Comet 220P/McNaught</h2>
+            <span class="desig">220P</span>
+          </div>
+          <span class="status degraded">Degraded &middot; Gradient</span>
+          <dl class="specs">
+            <dt>Instrument</dt><dd>Canary One &middot; Half-Meter</dd>
+            <dt>Site</dt><dd>Teide Observatory, Canary Islands</dd>
+            <dt>Filter</dt><dd>LRGB</dd>
+            <dt>Captured</dt><dd>2026-09-04 06:24 UTC</dd>
+          </dl>
+          <p class="note">A colour gradient runs corner to corner and the comet is the small fuzzy streak just below centre. A dirty snowball on a roughly six-year orbit, which is the reason to keep a poor frame of it.</p>
+        </div>
+      </li>
+      <li class="plate c-solar-system" id="p-saturn">
+        <a class="shot" href="#v-saturn" aria-label="Open Saturn full screen">
+          <span class="idx">07 / 07</span>
+          <img src="images/2026-09-04-saturn.jpg" alt="A small pale orange disc near the centre of a black frame, with faint extensions to either side where the rings are, blurred and low in detail." width="600" height="600" loading="lazy" decoding="async">
+        </a>
+        <div class="readout">
+          <div class="name">
+            <h2>Saturn</h2>
+            <span class="desig">Sol VI</span>
+          </div>
+          <span class="status degraded">Degraded &middot; Low resolution</span>
+          <dl class="specs">
+            <dt>Instrument</dt><dd>Australia One &middot; Half-Meter</dd>
+            <dt>Site</dt><dd>Siding Spring, New South Wales</dd>
+            <dt>Filter</dt><dd>RGB</dd>
+            <dt>Captured</dt><dd>2026-09-04 12:24 UTC</dd>
+          </dl>
+          <p class="note">Six hundred pixels across, and about forty of them are Saturn. The rings are the two faint ears on either side of the disc. A planet this small on the sensor is really a test of whether the air was steady, and it was not.</p>
+        </div>
+      </li>
+      </ol>
+    </main>
+  </div>
+
+  <footer class="foot">
+    <div class="elbow"></div>
+    <div class="bar">
+      <span>Captured with <a href="https://slooh.com">Slooh</a></span>
+      <span>Watermarks left intact</span>
+      <a href="#top">Top</a>
+    </div>
+    <div class="cap"></div>
+  </footer>
+
+</div>
+
+  <div class="viewer" id="v-orion-nebula" role="dialog" aria-label="Orion Nebula, full screen">
+    <div class="vhead">
+      <h2>Orion Nebula</h2>
+      <span class="desig">M42</span>
+      <span class="spacer"></span>
+      <a class="vbtn close" href="#p-orion-nebula">Close</a>
+    </div>
+    <div class="vstage"><img src="images/2026-09-04-orion-nebula.jpg" alt="A bright nebula filling the frame, with a blazing white core at centre and sweeping red and blue-grey clouds of gas spreading out to either side, against a dark sky scattered with stars." loading="lazy" decoding="async"></div>
+    <div class="vfoot">
+      <a class="vbtn prev" href="#v-saturn" aria-label="Previous record">&lsaquo;</a>
+      <a class="vbtn next" href="#v-omega-centauri" aria-label="Next record">&rsaquo;</a>
+      <span class="vcount">01 / 07</span>
+      <p class="vnote">The Trapezium burns out the middle of the frame and the wings of gas carry on regardless. Four filtered exposures stacked into one colour image, and the only frame in this batch that needs no apology.</p>
+    </div>
+  </div>
+  <div class="viewer" id="v-omega-centauri" role="dialog" aria-label="Omega Centauri, full screen">
+    <div class="vhead">
+      <h2>Omega Centauri</h2>
+      <span class="desig">NGC 5139</span>
+      <span class="spacer"></span>
+      <a class="vbtn close" href="#p-omega-centauri">Close</a>
+    </div>
+    <div class="vstage"><img src="images/2026-09-04-omega-centauri.jpg" alt="A dense globular star cluster, thousands of individual white points crowding toward a bright unresolved core, on a black sky. A faint straight line crosses the upper right corner." loading="lazy" decoding="async"></div>
+    <div class="vfoot">
+      <a class="vbtn prev" href="#v-orion-nebula" aria-label="Previous record">&lsaquo;</a>
+      <a class="vbtn next" href="#v-andromeda" aria-label="Next record">&rsaquo;</a>
+      <span class="vcount">02 / 07</span>
+      <p class="vnote">Roughly ten million stars held together by their own gravity, sitting too far south for the Canary scopes to reach. Australia One caught it clean. Something in low orbit drew a thin line across the top right on its way past.</p>
+    </div>
+  </div>
+  <div class="viewer" id="v-andromeda" role="dialog" aria-label="Andromeda Galaxy, full screen">
+    <div class="vhead">
+      <h2>Andromeda Galaxy</h2>
+      <span class="desig">M31</span>
+      <span class="spacer"></span>
+      <a class="vbtn close" href="#p-andromeda">Close</a>
+    </div>
+    <div class="vstage"><img src="images/2026-09-04-andromeda.jpg" alt="A large bright galaxy tilted across a black-and-white frame, with a glowing oval core and dark dust lanes curving through the surrounding haze, on a field of stars." loading="lazy" decoding="async"></div>
+    <div class="vfoot">
+      <a class="vbtn prev" href="#v-omega-centauri" aria-label="Previous record">&lsaquo;</a>
+      <a class="vbtn next" href="#v-hubbles-variable-nebula" aria-label="Next record">&rsaquo;</a>
+      <span class="vcount">03 / 07</span>
+      <p class="vnote">Faint vertical stripes run through this one. That is the sensor, not the sky. Underneath them the dust lanes are plainly there, having crossed two and a half million light years of nothing to get here.</p>
+    </div>
+  </div>
+  <div class="viewer" id="v-hubbles-variable-nebula" role="dialog" aria-label="Hubble&#x27;s Variable Nebula, full screen">
+    <div class="vhead">
+      <h2>Hubble&#x27;s Variable Nebula</h2>
+      <span class="desig">NGC 2261</span>
+      <span class="spacer"></span>
+      <a class="vbtn close" href="#p-hubbles-variable-nebula">Close</a>
+    </div>
+    <div class="vstage"><img src="images/2026-09-04-hubbles-variable-nebula.jpg" alt="A dense field of faint stars in muted brown tones, with a small comet-shaped bright nebula at centre and a thin pale line crossing the frame diagonally on the right." loading="lazy" decoding="async"></div>
+    <div class="vfoot">
+      <a class="vbtn prev" href="#v-andromeda" aria-label="Previous record">&lsaquo;</a>
+      <a class="vbtn next" href="#v-crab-nebula" aria-label="Next record">&rsaquo;</a>
+      <span class="vcount">04 / 07</span>
+      <p class="vnote">A satellite crossed during the exposure and left the pale line down the right side. The nebula is the small comet-shaped smudge at centre, lit by a star that flickers, so its shape genuinely changes from one week to the next.</p>
+    </div>
+  </div>
+  <div class="viewer" id="v-crab-nebula" role="dialog" aria-label="Crab Nebula, full screen">
+    <div class="vhead">
+      <h2>Crab Nebula</h2>
+      <span class="desig">M1</span>
+      <span class="spacer"></span>
+      <a class="vbtn close" href="#p-crab-nebula">Close</a>
+    </div>
+    <div class="vstage"><img src="images/2026-09-04-crab-nebula.jpg" alt="A small mottled pink knot of nebulosity near the centre of a star field, with a broad amber wash of glare covering the left half of the frame." loading="lazy" decoding="async"></div>
+    <div class="vfoot">
+      <a class="vbtn prev" href="#v-hubbles-variable-nebula" aria-label="Previous record">&lsaquo;</a>
+      <a class="vbtn next" href="#v-comet-220p" aria-label="Next record">&rsaquo;</a>
+      <span class="vcount">05 / 07</span>
+      <p class="vnote">Something bright sat just outside the frame and half the picture is its glare. The remnant is the small tangled knot near the middle, all that is left of a star that Chinese astronomers watched explode in 1054.</p>
+    </div>
+  </div>
+  <div class="viewer" id="v-comet-220p" role="dialog" aria-label="Comet 220P/McNaught, full screen">
+    <div class="vhead">
+      <h2>Comet 220P/McNaught</h2>
+      <span class="desig">220P</span>
+      <span class="spacer"></span>
+      <a class="vbtn close" href="#p-comet-220p">Close</a>
+    </div>
+    <div class="vstage"><img src="images/2026-09-04-comet-220p.jpg" alt="A dark red and brown gradient across the frame with scattered stars, and a small elongated fuzzy patch just below centre where the comet is." loading="lazy" decoding="async"></div>
+    <div class="vfoot">
+      <a class="vbtn prev" href="#v-crab-nebula" aria-label="Previous record">&lsaquo;</a>
+      <a class="vbtn next" href="#v-saturn" aria-label="Next record">&rsaquo;</a>
+      <span class="vcount">06 / 07</span>
+      <p class="vnote">A colour gradient runs corner to corner and the comet is the small fuzzy streak just below centre. A dirty snowball on a roughly six-year orbit, which is the reason to keep a poor frame of it.</p>
+    </div>
+  </div>
+  <div class="viewer" id="v-saturn" role="dialog" aria-label="Saturn, full screen">
+    <div class="vhead">
+      <h2>Saturn</h2>
+      <span class="desig">Sol VI</span>
+      <span class="spacer"></span>
+      <a class="vbtn close" href="#p-saturn">Close</a>
+    </div>
+    <div class="vstage"><img src="images/2026-09-04-saturn.jpg" alt="A small pale orange disc near the centre of a black frame, with faint extensions to either side where the rings are, blurred and low in detail." loading="lazy" decoding="async"></div>
+    <div class="vfoot">
+      <a class="vbtn prev" href="#v-comet-220p" aria-label="Previous record">&lsaquo;</a>
+      <a class="vbtn next" href="#v-orion-nebula" aria-label="Next record">&rsaquo;</a>
+      <span class="vcount">07 / 07</span>
+      <p class="vnote">Six hundred pixels across, and about forty of them are Saturn. The rings are the two faint ears on either side of the disc. A planet this small on the sensor is really a test of whether the air was steady, and it was not.</p>
+    </div>
+  </div>
+
+<script src="app.js?v=c97a9f5e"></script>
+</body>
+</html>
