@@ -5,8 +5,41 @@
     <link>https://baggins-of-the-shire.github.io/long-range-sensors/</link>
     <description>Robotic telescope captures, logged with the fault written on the label.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 04 Sep 2026 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2026 12:00:00 +0000</lastBuildDate>
     <atom:link rel="self" href="https://baggins-of-the-shire.github.io/long-range-sensors/feed.xml" type="application/rss+xml"/>
+    <item>
+      <title>Jellyfish Nebula</title>
+      <link>https://baggins-of-the-shire.github.io/long-range-sensors/#p-jellyfish-nebula</link>
+      <guid isPermaLink="true">https://baggins-of-the-shire.github.io/long-range-sensors/#p-jellyfish-nebula</guid>
+      <pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+      <category>nebula</category>
+      <description><![CDATA[<p><img src="https://baggins-of-the-shire.github.io/long-range-sensors/images/2026-09-04-jellyfish-nebula.jpg" alt="A dense field of white stars on black, with a faint reddish curved arc of nebulosity left of centre and a single brilliant star at lower right throwing diffraction spikes across the corner." width="1600" height="1090"></p>
+<p>The remnant is the faint rust coloured arc left of centre and it barely cleared the noise. A brilliant star sits at lower right with its glare spread across that corner. What is left of the star that exploded here is thin gas now, so a short exposure finds the shape and almost nothing else.</p>
+<p>Canary Three, M filter. Degraded: Low signal.</p>]]></description>
+      <enclosure url="https://baggins-of-the-shire.github.io/long-range-sensors/images/2026-09-04-jellyfish-nebula.jpg" length="334728" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Double Cluster</title>
+      <link>https://baggins-of-the-shire.github.io/long-range-sensors/#p-double-cluster</link>
+      <guid isPermaLink="true">https://baggins-of-the-shire.github.io/long-range-sensors/#p-double-cluster</guid>
+      <pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+      <category>cluster</category>
+      <description><![CDATA[<p><img src="https://baggins-of-the-shire.github.io/long-range-sensors/images/2026-09-04-double-cluster.jpg" alt="Two loose knots of bright white stars, one left of centre and one at right, standing out from a scattered field of fainter stars on a black sky." width="1018" height="1018"></p>
+<p>Two open clusters sitting close enough together to share a name, both of them young and both a long way out in the same spiral arm. Nothing went wrong here. The background is clean, the stars stay round into the corners, and the only thing to do with a frame like this is put it up.</p>
+<p>Canary One, L filter.</p>]]></description>
+      <enclosure url="https://baggins-of-the-shire.github.io/long-range-sensors/images/2026-09-04-double-cluster.jpg" length="99977" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Andromeda Galaxy</title>
+      <link>https://baggins-of-the-shire.github.io/long-range-sensors/#p-messier-31</link>
+      <guid isPermaLink="true">https://baggins-of-the-shire.github.io/long-range-sensors/#p-messier-31</guid>
+      <pubDate>Thu, 01 Oct 2026 12:00:00 +0000</pubDate>
+      <category>galaxy</category>
+      <description><![CDATA[<p><img src="https://baggins-of-the-shire.github.io/long-range-sensors/images/2026-09-04-messier-31.jpg" alt="A large spiral galaxy tilted steeply across the frame, its core burnt out to flat white, with dark dust lanes curving through the pale disc and two small fuzzy companions nearby on a star filled sky." width="1600" height="1090"></p>
+<p>The same galaxy as the banded frame further down the log, caught the same night on a different scope, and this time the dust lanes came through. The core is the problem. It is clipped to flat white with visible steps around it, which is what happens when the exposure that brings out the arms overwhelms the middle. Two companion galaxies are in the frame as well, one above the core and one below.</p>
+<p>Canary Three, M filter. Degraded: Blown core.</p>]]></description>
+      <enclosure url="https://baggins-of-the-shire.github.io/long-range-sensors/images/2026-09-04-messier-31.jpg" length="274313" type="image/jpeg"/>
+    </item>
     <item>
       <title>Orion Nebula</title>
       <link>https://baggins-of-the-shire.github.io/long-range-sensors/#p-orion-nebula</link>
@@ -16,7 +49,7 @@
       <description><![CDATA[<p><img src="https://baggins-of-the-shire.github.io/long-range-sensors/images/2026-09-04-orion-nebula.jpg" alt="A bright nebula filling the frame, with a blazing white core at centre and sweeping red and blue-grey clouds of gas spreading out to either side, against a dark sky scattered with stars." width="1018" height="1018"></p>
 <p>The Trapezium burns out the middle of the frame and the wings of gas carry on regardless. Four filtered exposures stacked into one colour image, and the only frame in this batch that needs no apology.</p>
 <p>Canary One, LRGB filter.</p>]]></description>
-      <enclosure url="https://baggins-of-the-shire.github.io/long-range-sensors/images/2026-09-04-orion-nebula.jpg" length="81910" type="image/jpeg"/>
+      <enclosure url="https://baggins-of-the-shire.github.io/long-range-sensors/images/2026-09-04-orion-nebula.jpg" length="87681" type="image/jpeg"/>
     </item>
     <item>
       <title>Omega Centauri</title>
@@ -27,7 +60,7 @@
       <description><![CDATA[<p><img src="https://baggins-of-the-shire.github.io/long-range-sensors/images/2026-09-04-omega-centauri.jpg" alt="A dense globular star cluster, thousands of individual white points crowding toward a bright unresolved core, on a black sky. A faint straight line crosses the upper right corner." width="1365" height="1365"></p>
 <p>Roughly ten million stars held together by their own gravity, sitting too far south for the Canary scopes to reach. Australia One caught it clean. Something in low orbit drew a thin line across the top right on its way past.</p>
 <p>Australia One, L filter.</p>]]></description>
-      <enclosure url="https://baggins-of-the-shire.github.io/long-range-sensors/images/2026-09-04-omega-centauri.jpg" length="265716" type="image/jpeg"/>
+      <enclosure url="https://baggins-of-the-shire.github.io/long-range-sensors/images/2026-09-04-omega-centauri.jpg" length="271487" type="image/jpeg"/>
     </item>
     <item>
       <title>Andromeda Galaxy</title>
@@ -38,7 +71,7 @@
       <description><![CDATA[<p><img src="https://baggins-of-the-shire.github.io/long-range-sensors/images/2026-09-04-andromeda.jpg" alt="A large bright galaxy tilted across a black-and-white frame, with a glowing oval core and dark dust lanes curving through the surrounding haze, on a field of stars." width="1365" height="1365"></p>
 <p>Faint vertical stripes run through this one. That is the sensor, not the sky. Underneath them the dust lanes are plainly there, having crossed two and a half million light years of nothing to get here.</p>
 <p>Canary Two, L filter. Degraded: Sensor banding.</p>]]></description>
-      <enclosure url="https://baggins-of-the-shire.github.io/long-range-sensors/images/2026-09-04-andromeda.jpg" length="220658" type="image/jpeg"/>
+      <enclosure url="https://baggins-of-the-shire.github.io/long-range-sensors/images/2026-09-04-andromeda.jpg" length="226429" type="image/jpeg"/>
     </item>
     <item>
       <title>Hubble&#x27;s Variable Nebula</title>
@@ -49,7 +82,7 @@
       <description><![CDATA[<p><img src="https://baggins-of-the-shire.github.io/long-range-sensors/images/2026-09-04-hubbles-variable-nebula.jpg" alt="A dense field of faint stars in muted brown tones, with a small comet-shaped bright nebula at centre and a thin pale line crossing the frame diagonally on the right." width="1018" height="1018"></p>
 <p>A satellite crossed during the exposure and left the pale line down the right side. The nebula is the small comet-shaped smudge at centre, lit by a star that flickers, so its shape genuinely changes from one week to the next.</p>
 <p>Canary One, LRGB filter. Degraded: Satellite transit.</p>]]></description>
-      <enclosure url="https://baggins-of-the-shire.github.io/long-range-sensors/images/2026-09-04-hubbles-variable-nebula.jpg" length="144240" type="image/jpeg"/>
+      <enclosure url="https://baggins-of-the-shire.github.io/long-range-sensors/images/2026-09-04-hubbles-variable-nebula.jpg" length="150011" type="image/jpeg"/>
     </item>
     <item>
       <title>Crab Nebula</title>
@@ -60,7 +93,7 @@
       <description><![CDATA[<p><img src="https://baggins-of-the-shire.github.io/long-range-sensors/images/2026-09-04-crab-nebula.jpg" alt="A small mottled pink knot of nebulosity near the centre of a star field, with a broad amber wash of glare covering the left half of the frame." width="1018" height="1018"></p>
 <p>Something bright sat just outside the frame and half the picture is its glare. The remnant is the small tangled knot near the middle, all that is left of a star that Chinese astronomers watched explode in 1054.</p>
 <p>Canary One, LRGB filter. Degraded: Gradient.</p>]]></description>
-      <enclosure url="https://baggins-of-the-shire.github.io/long-range-sensors/images/2026-09-04-crab-nebula.jpg" length="81988" type="image/jpeg"/>
+      <enclosure url="https://baggins-of-the-shire.github.io/long-range-sensors/images/2026-09-04-crab-nebula.jpg" length="87759" type="image/jpeg"/>
     </item>
     <item>
       <title>Comet 220P/McNaught</title>
@@ -71,7 +104,7 @@
       <description><![CDATA[<p><img src="https://baggins-of-the-shire.github.io/long-range-sensors/images/2026-09-04-comet-220p.jpg" alt="A dark red and brown gradient across the frame with scattered stars, and a small elongated fuzzy patch just below centre where the comet is." width="1018" height="1018"></p>
 <p>A colour gradient runs corner to corner and the comet is the small fuzzy streak just below centre. A dirty snowball on a roughly six-year orbit, which is the reason to keep a poor frame of it.</p>
 <p>Canary One, LRGB filter. Degraded: Gradient.</p>]]></description>
-      <enclosure url="https://baggins-of-the-shire.github.io/long-range-sensors/images/2026-09-04-comet-220p.jpg" length="99342" type="image/jpeg"/>
+      <enclosure url="https://baggins-of-the-shire.github.io/long-range-sensors/images/2026-09-04-comet-220p.jpg" length="105113" type="image/jpeg"/>
     </item>
     <item>
       <title>Saturn</title>
@@ -82,7 +115,7 @@
       <description><![CDATA[<p><img src="https://baggins-of-the-shire.github.io/long-range-sensors/images/2026-09-04-saturn.jpg" alt="A small pale orange disc near the centre of a black frame, with faint extensions to either side where the rings are, blurred and low in detail." width="600" height="600"></p>
 <p>Six hundred pixels across, and about forty of them are Saturn. The rings are the two faint ears on either side of the disc. A planet this small on the sensor is really a test of whether the air was steady, and it was not.</p>
 <p>Australia One, RGB filter. Degraded: Low resolution.</p>]]></description>
-      <enclosure url="https://baggins-of-the-shire.github.io/long-range-sensors/images/2026-09-04-saturn.jpg" length="4442" type="image/jpeg"/>
+      <enclosure url="https://baggins-of-the-shire.github.io/long-range-sensors/images/2026-09-04-saturn.jpg" length="10213" type="image/jpeg"/>
     </item>
   </channel>
 </rss>
